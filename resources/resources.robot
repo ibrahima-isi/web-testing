@@ -25,7 +25,7 @@ Verifier message de reussite
     Page Should Contain    ${expected_msg}
 
 Remplir le formulaire
-    Input Text    ${NAME}
+    Input Text    ${NAME}    "Ibrahima DIALLO"
     Select From List By Value    ${SELECT}    item2
     Click Element    ${BOX3}
     Click Element    ${BOX1}
@@ -35,5 +35,5 @@ Soumettre le formulaire
     Click Button    ${BTN_SUBMIT}
 
 Fermer le navigateur
-    Set Selenium Implicit Wait    5
+    Set Selenium Implicit Wait    10
     Close Browser

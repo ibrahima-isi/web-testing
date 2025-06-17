@@ -1,67 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.11.2 on linux)" generated="2025-06-17T19:58:28.705936" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="/home/guiconnect/practice_test/testcases/tests.robot">
+<robot generator="Robot 7.3 (Python 3.13.3 on win32)" generated="2025-06-17T20:41:32.285741" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\ibrab\Desktop\web-testing\testcases\tests.robot">
 <test id="s1-t1" name="Test Remplissage Et Soumission Formulaire" line="5">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-06-17T19:58:29.394065" level="INFO">${expected_msg} = "Le message"</msg>
+<msg time="2025-06-17T20:41:32.963897" level="INFO">${expected_msg} = Submitted Successfully</msg>
 <var>${expected_msg}</var>
-<arg>"Le message"</arg>
+<arg>Submitted Successfully</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-06-17T19:58:29.393787" elapsed="0.000331"/>
+<status status="PASS" start="2025-06-17T20:41:32.963616" elapsed="0.000335"/>
 </kw>
 <kw name="Executer Scenario" owner="resources">
 <kw name="Ouvrir le navigateur" owner="resources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-17T19:58:29.395845" level="INFO">Opening browser 'Chrome' to base url 'https://selenium-practice.netlify.app/'.</msg>
-<msg time="2025-06-17T19:59:15.779295" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2025-06-17T19:59:15.779627" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</msg>
+<msg time="2025-06-17T20:41:32.966237" level="INFO">Opening browser 'Chrome' to base url 'https://selenium-practice.netlify.app/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-06-17T19:58:29.395510" elapsed="46.405716">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="PASS" start="2025-06-17T20:41:32.965550" elapsed="3.183863"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" start="2025-06-17T19:59:15.801509" elapsed="0.000054"/>
+<status status="PASS" start="2025-06-17T20:41:36.149777" elapsed="0.002720"/>
 </kw>
-<status status="FAIL" start="2025-06-17T19:58:29.395184" elapsed="46.406550">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="PASS" start="2025-06-17T20:41:32.965168" elapsed="3.187664"/>
 </kw>
 <kw name="Remplir le formulaire" owner="resources">
-<status status="NOT RUN" start="2025-06-17T19:59:15.801955" elapsed="0.000051"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:36.155460" level="INFO">Typing text '"Ibrahima DIALLO"' into text field 'id=name'.</msg>
+<arg>${NAME}</arg>
+<arg>"Ibrahima DIALLO"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-17T20:41:36.154728" elapsed="0.317249"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:36.472862" level="INFO">Selecting options from selection list 'id=selection' by value item2.</msg>
+<arg>${SELECT}</arg>
+<arg>item2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-06-17T20:41:36.472417" elapsed="0.108390"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:36.581562" level="INFO">Clicking element 'id=check3'.</msg>
+<arg>${BOX3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-17T20:41:36.581086" elapsed="0.098716"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:36.680568" level="INFO">Clicking element 'id=check1'.</msg>
+<arg>${BOX1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-17T20:41:36.680117" elapsed="0.091725"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:36.772704" level="INFO">Typing text '08/12/1996' into text field 'id=date'.</msg>
+<arg>${DATE_PICK}</arg>
+<arg>${DATE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-17T20:41:36.772159" elapsed="0.112114"/>
+</kw>
+<status status="PASS" start="2025-06-17T20:41:36.153361" elapsed="0.731069"/>
 </kw>
 <kw name="Soumettre le formulaire" owner="resources">
-<status status="NOT RUN" start="2025-06-17T19:59:15.802156" elapsed="0.000043"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:36.885198" level="INFO">Clicking button 'xpath=/html/body/form/button'.</msg>
+<arg>${BTN_SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-17T20:41:36.884955" elapsed="0.166089"/>
+</kw>
+<status status="PASS" start="2025-06-17T20:41:36.884655" elapsed="0.166620"/>
 </kw>
 <kw name="Verifier message de reussite" owner="resources">
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-17T20:41:37.052447" elapsed="0.004721"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-17T20:41:37.123429" level="INFO">Current page contains text 'Submitted Successfully'.</msg>
 <arg>${expected_msg}</arg>
-<status status="NOT RUN" start="2025-06-17T19:59:15.802369" elapsed="0.000052"/>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-17T20:41:37.057597" elapsed="0.065988"/>
+</kw>
+<arg>${expected_msg}</arg>
+<status status="PASS" start="2025-06-17T20:41:37.051650" elapsed="0.072115"/>
 </kw>
 <kw name="Fermer le navigateur" owner="resources">
-<status status="NOT RUN" start="2025-06-17T19:59:15.802576" elapsed="0.000067"/>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-17T20:41:37.124554" elapsed="0.016272"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-17T20:41:37.141141" elapsed="2.612396"/>
+</kw>
+<status status="PASS" start="2025-06-17T20:41:37.124067" elapsed="2.629699"/>
 </kw>
 <arg>${expected_msg}</arg>
-<status status="FAIL" start="2025-06-17T19:58:29.394694" elapsed="46.408104">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="PASS" start="2025-06-17T20:41:32.964543" elapsed="6.789374"/>
 </kw>
 <tag>sanity</tag>
-<status status="FAIL" start="2025-06-17T19:58:29.392419" elapsed="46.410806">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="PASS" start="2025-06-17T20:41:32.962158" elapsed="6.792303"/>
 </test>
-<status status="FAIL" start="2025-06-17T19:58:28.707146" elapsed="47.096807"/>
+<status status="PASS" start="2025-06-17T20:41:32.287706" elapsed="7.468080"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">sanity</stat>
+<stat pass="1" fail="0" skip="0">sanity</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
 </suite>
 </statistics>
 <errors>
