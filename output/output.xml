@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.11.2 on linux)" generated="2025-06-17T19:58:28.705936" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/guiconnect/practice_test/testcases/tests.robot">
+<test id="s1-t1" name="Test Remplissage Et Soumission Formulaire" line="5">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-17T19:58:29.394065" level="INFO">${expected_msg} = "Le message"</msg>
+<var>${expected_msg}</var>
+<arg>"Le message"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-17T19:58:29.393787" elapsed="0.000331"/>
+</kw>
+<kw name="Executer Scenario" owner="resources">
+<kw name="Ouvrir le navigateur" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-17T19:58:29.395845" level="INFO">Opening browser 'Chrome' to base url 'https://selenium-practice.netlify.app/'.</msg>
+<msg time="2025-06-17T19:59:15.779295" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-06-17T19:59:15.779627" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-06-17T19:58:29.395510" elapsed="46.405716">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2025-06-17T19:59:15.801509" elapsed="0.000054"/>
+</kw>
+<status status="FAIL" start="2025-06-17T19:58:29.395184" elapsed="46.406550">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Remplir le formulaire" owner="resources">
+<status status="NOT RUN" start="2025-06-17T19:59:15.801955" elapsed="0.000051"/>
+</kw>
+<kw name="Soumettre le formulaire" owner="resources">
+<status status="NOT RUN" start="2025-06-17T19:59:15.802156" elapsed="0.000043"/>
+</kw>
+<kw name="Verifier message de reussite" owner="resources">
+<arg>${expected_msg}</arg>
+<status status="NOT RUN" start="2025-06-17T19:59:15.802369" elapsed="0.000052"/>
+</kw>
+<kw name="Fermer le navigateur" owner="resources">
+<status status="NOT RUN" start="2025-06-17T19:59:15.802576" elapsed="0.000067"/>
+</kw>
+<arg>${expected_msg}</arg>
+<status status="FAIL" start="2025-06-17T19:58:29.394694" elapsed="46.408104">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<tag>sanity</tag>
+<status status="FAIL" start="2025-06-17T19:58:29.392419" elapsed="46.410806">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2025-06-17T19:58:28.707146" elapsed="47.096807"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">sanity</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
